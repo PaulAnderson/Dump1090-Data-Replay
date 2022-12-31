@@ -9,11 +9,10 @@ This program replays data from a file in the format produced by the Dump1090 ADS
 1. Install the .NET Core runtime, if it is not already installed on your system.
 2. Clone or download this repository.
 3. Open a command prompt in the repository directory.
+4. Copy dump1090.txt file into the repository directory.
 4. Run the following command:
 
 dotnet run
-
-Copy code
 
 ## Configuration
 
@@ -21,3 +20,4 @@ The following configuration options can be modified in the `Program.cs` file:
 
 - `TCPPort`: The port to listen for incoming connections on.
 - `filePath`: The path to the file with the data to replay.
+- `SpeedFactor`: The relative speed to replay data. 1 is the realtime speed the data was received. 10 is 10x faster, etc
