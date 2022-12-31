@@ -12,7 +12,27 @@ This program replays data from a file in the format produced by the Dump1090 ADS
 4. Copy dump1090.txt file into the repository directory.
 4. Run the following command:
 
+```
 dotnet run
+```
+
+## Usage (Containerized)    
+
+1. Install Docker, if it is not already installed on your system.
+2. Clone or download this repository.
+3. Open a command prompt in the repository directory.
+4. Build the Docker image using the following command:
+
+```
+docker build -t dump1090-replay .
+```
+5. Run the container using the following command:
+
+```
+docker run --rm -it -p 30003:30003 dump1090-replay
+```
+
+This will start the container and map the container's port 30003 to the host's port 30003, allowing you to connect to the program from the host machine.
 
 ## Configuration
 
